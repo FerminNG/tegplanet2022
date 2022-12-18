@@ -1,0 +1,76 @@
+:root{
+    --blanco:#ffffff;
+    --oscuro: #212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --gris:#757575;
+    --grisclaro: #DFE9F3;
+
+
+    
+}
+
+/* globales */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* hack para Box Model */
+
+}
+
+body{
+    font-size: 16px; /* 1rem =10px */
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+    
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/* codigo del login */
+
+.main{
+    background-color: var(--gris);
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+.tarjeta{
+    margin: 20px auto;
+    width: 60%;
+
+}
+
+.tarjeta_consulta{
+margin-top: 20px;
+}
+
+
+
+.contenedor_padre{
+    background-image: url(../images/imagen.jpg);
+}
+.cabezera{
+   display: flex; 
+justify-content: space-between;
+   align-items: center;
+}
+
+img{
+    max-width: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 30px;
+}
