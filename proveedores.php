@@ -421,7 +421,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                      ?>
                     
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                      <strong>Error!</strong>ERROR AL INSERTAR LLOS DATOS. 
+                      <strong>Error!</strong>ERROR AL INSERTAR LOS DATOS. 
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">  </button>
 
                     </div>
@@ -500,7 +500,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                           <td><?php echo $dato->Telefono; ?></td>
                           <td><?php echo $dato->Email; ?></td>
                           
-                       <td><a href="guardar/editar.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-warning">Editar</a>
+                       <td><a href="guardar/editar_proveedores.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-warning">Editar</a>
                           <a onclick="return confirm('Estas seguro de eliminar?');" href="guardar/eliminar_paciente.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-danger">Eliminar</a></td>
                           
                         

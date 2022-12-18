@@ -5,18 +5,16 @@ print_r($_POST);if(!isset($_POST['codigo'])){
 }
 include_once '../conexion/conexion.php';
 
-$codigo= $_POST['codigo'];
+$id_Product= $_POST['id_Product'];
 $nombre=$_POST['nombre'];
-$apellidos=$_POST['apellidos'];
-$edad=$_POST['edad'];
-$sexo1=$_POST['sexo1'];
-$direccion=$_POST['direccion'];
-$tutor=$_POST['tutor'];
-$telefono=$_POST['telefono'];
+$stock=$_POST['stock'];
+$stock_min=$_POST['stock_min'];
+$fecha=$_POST['fecha_vencimiento'];
 
 
-$sentencia= $bd->prepare("UPDATE pacientes SET  nombre=?, apellidos=?, edad=?, sexo=?, direccion=?, tutor=?, telefono=? WHERE codigo=?; ");
-$resultado= $sentencia->execute([$codigo,$nombre,$apellidos,$edad,$sexo1,$direccion,$tutor,$telefono]);
+
+$sentencia= $bd->prepare("UPDATE productos SET  nombre=?, stock=?, stock_min=?, fecha_vencimiento=? WHERE id_Product=?; ");
+$resultado= $sentencia->execute([$codigo,$nombre,$stock,$stock_min,$fecha]);
 
 if($resultado==TRUE){
     header('Location: ../index.php?mensaje=actualizado');

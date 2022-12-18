@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_GET['Id_Produc'])) {
+if (!isset($_GET['Id_Prove'])) {
   header('Location: ../index.php?mensaje=Error');
   exit();
 }
@@ -9,10 +9,10 @@ if (!isset($_GET['Id_Produc'])) {
 
 include_once '../conexion/conexion.php';
 
-$Id_Produc = $_GET['Id_Produc'];
+$Id_Prove = $_GET['Id_Prove'];
 
-$sentencia = $bd->prepare("SELECT * FROM productos WHERE Id_Produc=?;");
-$sentencia->execute([$Id_Produc]);
+$sentencia = $bd->prepare("SELECT * FROM proveedor WHERE Id_Prove=?;");
+$sentencia->execute([$Id_Prove]);
 $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 
 
@@ -81,7 +81,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
     <div class="row">
       <div class="col-md">
         <header class="py-3 cabezera">
-          <h4 class="text-center">ACTUALIZAR PRODUCTO</h4>
+          <h4 class="text-center">ACTUALIZAR PROVEEDOR</h4>
           <img src="../images/imagen.jpg" alt="">
 
         </header>
@@ -102,7 +102,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
         <!--inicio del formulario-->
         <div class=" card card-primary ">
           <div class="card-header">
-            <h4 class="card-title text-center">ACTUALIZAR PRODUCTO</h4>
+            <h4 class="card-title text-center">ACTUALIZAR PROVEEDOR</h4>
 
 
 
@@ -130,12 +130,12 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 
           </div>
 
-          <form id="registro" name="registro" method="POST" action="editar_paciente.php">
+          <form id="registro" name="registro" method="POST" action="editar_paciente_actua.php">
 
             <div class="d-flex flex-row justify-content-center">
               <div class="p-2 col-lg-5 ">
-                <label for="nombre" class="form-label">ID_PRODUCTO</label>
-                <input type="text" value="<?php echo $persona->Id_Produc; ?>" class="form-control" id="Id_Produc" name="Id_Produc" aria-describedby="emailHelp" placeholder="introduce el codigo" require>
+                <label for="nombre" class="form-label">ID_PROVEEDOR</label>
+                <input type="text" value="<?php echo $persona->Id_Prove; ?>" class="form-control" id="Id_Prove" name="Id_Prove" aria-describedby="emailHelp" placeholder="introduce el proveedor" require>
               </div>
               <div class="p-2 col-lg-5">
                 <label for="telefono" class="form-label">NOMBRE</label>
@@ -145,19 +145,19 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 
             <div class="d-flex flex-row justify-content-center">
               <div class="p-2 col-lg-5">
-                <label for="edad" class="form-label">stock</label>
-                <input type="number" value="<?php echo $persona->stock; ?>" class="form-control" name="stock" id="stock" placeholder="introduce la edad" require>
+                <label for="Direccion" class="form-label">Direccion</label>
+                <input type="text" value="<?php echo $persona->Direccion; ?>" class="form-control" name="Direccion" id="Direccion" placeholder="introduce la direccion" require>
               </div>
               <div class="p-2 col-lg-5">
-                <label for="apellidos" class="form-label">stock_min</label>
-                <input type="text" value="<?php echo $persona->stock_min; ?>" class="form-control" name="stock_min" id="stock_min" placeholder="introduce el apellido" require>
+                <label for="Telefono" class="form-label">Telefono</label>
+                <input type="tel" value="<?php echo $persona->Telefono; ?>" class="form-control" name="Telefono" id="Telefono" placeholder="introduce el telefono" require>
               </div>
             </div>
 
             <div class="d-flex flex-row justify-content-center">
               <div class="p-2 col-lg-5">
-                <label for="fecha_vencimiento" class="form-label">fecha_vencimiento</label>
-                <input type="date" value="<?php echo $persona->fecha_vencimiento; ?>" class="form-control" name="fecha_vencimiento" id="fecha_vencimiento" placeholder="introduce la fecha_vencimiento" require>
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" value="<?php echo $persona->Email; ?>" class="form-control" name="Email" id="Email" placeholder="introduce el Email" require>
 
               
             </div>
@@ -165,7 +165,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
            
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="hidden" name="id_Product" value="<?php echo $persona->id_Product; ?>">
+              <input type="hidden" name="codigo" value="<?php echo $persona->codigo; ?>">
               <button type="submit" class="btn btn-success" name="actualizar" id="actualizar" value="Editar">ACTUALIZAR</button>
             </div>
           </form>

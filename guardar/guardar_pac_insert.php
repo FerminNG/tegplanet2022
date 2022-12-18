@@ -10,19 +10,16 @@ if(empty($_POST['nombre'])|| empty($_POST['Direccion'])|| empty($_POST['Telefono
 
  
 
-}else{
-    echo "<script>alert('no hay datos');</script>";
 }
-
 
 
 
 include_once '../conexion/conexion.php';
 
 
-$nombre=$_POST['Nombre'];
+$nombre=$_POST['nombre'];
 $direccion=$_POST['Direccion'];
-$tel=$_POST['Telefono23'];
+$tel=$_POST['Telefono'];
 $correo=$_POST['Email'];
 
 
@@ -37,7 +34,7 @@ if($resultado== true){
 }else{
     header('Location: ../proveedores.php?mensaje=Error');
     exit();   
-}
+}  
 
 
 ?>
