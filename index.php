@@ -7,8 +7,6 @@ $sentencia= $bd-> query("SELECT * FROM productos");
 
 $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
-$proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
-
 
 
 ?>
@@ -258,13 +256,20 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
       <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">REGISTRO DE COMPRAS</h1>
+              <h1 class="m-0 text-dark">REGISTRO DE PACIENTES</h1>
+
+
+
+
+
+
+
+
 
               <!-- boton del modal -->
               <div class="col-sm-6">
@@ -274,57 +279,39 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
               </div> <!-- aqui termina -->
 
               <!-- *************************MODAL****************************************** -->
-              <a href="guardar/vista_guardaCom.php" class="mt-1 mx-0 btn btn-success" >Nueva Compra</a>
+              <a href="guardar/vista_guardaProve.php" class="mt-1 mx-0 btn btn-success" >Nuevo PRODUCTO</a>
 
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <di v class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nueva Compra</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
                       </div>
 
                         <div class="modal-body bodyModal">
                           
-                          <form id="registro" name="registro" method="POST" action="./guardar/guardar_paciente.php">
+                          <form id="registro" name="registro" method="POST" action="guardar_paciente.php">
                             
                               <div class="p-2  cajas">
-                                <label for="telefono" class="form-label">CANTIDAD</label>
-                                <input type="number" class="form-control" name="nombre" id="nombre" placeholder="introduce la cantidad" required>
+                                <label for="Nombre" class="form-label">NOMBRE</label>
+                                <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="introduce el nombre" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="stock" class="form-label">PRECIO UNITARIO</label>
-                                <input type="text" class="form-control" name="stock" id="edad" placeholder="introduce el precio unitario" required>
+                                <label for="stock" class="form-label">STOCK</label>
+                                <input type="number" class="form-control" name="stock" id="edad" placeholder="introduce el stock" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="apellidos" class="form-label">TOTAL PRECIO</label>
-                                <input type="text" class="form-control" name="stock_min" id="stock_min" placeholder="introduce el Total" required>
+                                <label for="apellidos" class="form-label">stock_min</label>
+                                <input type="number" class="form-control" name="stock_min" id="stock_min" placeholder="introduce el stock_min" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">FECHA COMPRA</label>
+                                <label for="fecha_vencimiento" class="form-label">fecha_vencimiento</label>
                                 <input type="date" class="form-control" name="fecha_vencimiento" id="fecha_vencimiento" placeholder="introduce el fecha_vencimiento" required>
-                              </div>
 
-                              <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">PRODUCTO</label>
-                                <select class="form-control" name="" id="">
-                                  <option value="#">Selecciona un producto</option>
-                                  <option value="#">Selecciona un producto</option>
-                                  <option value="#">Selecciona un producto</option>
-                                </select>
-                              </div>
-                              <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">PROVEEDOR</label>
-                               
-                                <select class="form-control" name="" id="">
-                                <?php foreach($proveedores as $prove){  ?>
-                                  <option value="1"><?php $prove->Nombre?></option>
-                                  <?php    } ?> 
-                                </select>
-                               
                               </div>
 
                               <!-- <div class="form-group d-flex justify-content-center">
@@ -382,14 +369,14 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="emailHelp" placeholder="introduce el codigo" autofocus require>
                   </div>
                   <div class="p-2">
-                    <label for="telefono" class="form-label">CANTIDAD</label>
-                    <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" require>
+                    <label for="telefono" class="form-label">NOMBRE</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" require>
                   </div>
                 </div>
 
                 <div class="d-flex flex-row">
                   <div class="p-2">
-                    <label for="edad" class="form-label">PRECIO UNITARIO</label>
+                    <label for="edad" class="form-label">EDAD</label>
                     <input type="number" class="form-control" name="edad" id="edad" placeholder="introduce la edad" require>
                   </div>
                   <div class="p-2">
@@ -417,17 +404,11 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
                   </div>
                   <div class="p-2">
                     <label for="sexo">SEXO</label>
-
-                  
-
                     <select class="form-control" aria-label=".form-select-lg example" id="sexo1" name="sexo1" require>
-                      <option selected></option>
+                      <option selected>Elije el sexo</option>
                       <option value="soltero">M</option>
-                      
+                      <option value="casado">F</option>
                     </select>
-
-                  
-
                   </div>
                 </div>
 
@@ -560,11 +541,11 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
                   <table id="tabla" class="display" style="width:100%">
                     <thead>
                       <tr>
-                        <th>CÓDIGO</th>
-                        <th>CANTIDAD</th>
-                        <th>PRECIO UNITARIO</th>
-                        <th>TOTAL COMPRA</th>
-                        <th>FECHA COMPRA</th>
+                        <th>ID_PRODUCTO</th>
+                        <th>NOMBRE</th>
+                        <th>STOCK</th>
+                        <th>STOCK_MINIMO</th>
+                        <th>FECHA_VENCIMIENTO</th>
                         <th>OPERACIONES</th>
                        
                     
@@ -574,7 +555,7 @@ $proveedores = $sentencia->fetchAll(PDO::FETCH_OBJ);
                      
                   <?php foreach($persona as $dato){  ?>
                         <tr>
-                          <td><?php echo $dato ->Id_Produc; ?></td>
+                          <td><?php echo $dato->Id_Produc; ?></td>
                           <td><?php echo $dato->Nombre; ?></td>
                           <td><?php echo $dato->stock; ?></td>
                           <td><?php echo $dato->stock_min; ?></td>
