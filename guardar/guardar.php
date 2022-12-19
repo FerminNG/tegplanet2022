@@ -1,7 +1,7 @@
 
 <?php
 
-include_once '../conexion/conexion2.php';
+include_once 'conexion/conexion2.php';
 
 
 $query = "SELECT * FROM productos order by Id_Produc desc limit 1";
@@ -9,13 +9,7 @@ $result = mysqli_query($conn, $query);
 
 $row= mysqli_fetch_array($result);
 
-
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -40,45 +34,10 @@ $row= mysqli_fetch_array($result);
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-
-
-
-
-
-
-
-
-
   <title>Insertar_Producto</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 
-<body class="contenedor_padre">
- 
-
-
-
-
-           
-
-
+<body class="contenedor_padre">   
                    <div class="container-fluid bg-primary">
                     <div class="row">
                       <div class="col-md">
@@ -101,7 +60,7 @@ $row= mysqli_fetch_array($result);
                        <!--inicio del formulario-->
               <div class="card card-primary tarjeta">
                 <div class="card-header">
-                <h4 class="card-title text-center">REGISTRO DE PRODUCTOS</h4>
+                <h4 class="card-title text-center" id="abrirModal">REGISTRO DE PRODUCTOS</h4>
 
                   <!-- alerta -->
 
@@ -131,7 +90,7 @@ $row= mysqli_fetch_array($result);
                 <!-- form start -->
                 <form id="registro" name="registro" method="POST" action="guardar_paciente.php">
 
-                  <div class="d-flex flex-row justify-content-center"></div>
+                  <div class="d-flex flex-row justify-content-center">
                     <div class="p-2 col-lg-5">
                       <label for="telefono" class="form-label">NOMBRE</label>
                       <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" required>
@@ -155,18 +114,8 @@ $row= mysqli_fetch_array($result);
 
                     <div class="form-group d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary" name="guarda" id="guarda">GUARDAR</button>
-                  </div>
+                  </div>          
 
-
-
-                  </div>
-
-                  
-
-                 
-                  
-                      
-                 
                 </form>
               </div>
               <!-- /.card -->
@@ -229,5 +178,6 @@ $row= mysqli_fetch_array($result);
 
 
 </body>
+<script src="../js/js/main.js"></script>
 
 </html>

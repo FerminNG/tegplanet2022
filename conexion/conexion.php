@@ -1,6 +1,6 @@
 <?php
 
-$db_name="localhost";
+$db_name="192.168.106.63";
 $db_nombre="tegplanet";
 $db_usuario="root";
 $db_contra="";

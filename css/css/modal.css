@@ -1,0 +1,168 @@
+/* estilos del modal */
+.modalConten {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(255,255,255,0.28);
+    backdrop-filter: blur(1px); */
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+  transition: opacity 0.2s 0s ease-in-out, transform 0.2s 0s ease-in-out;
+}
+.modalConten.mostrarModal {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.contenidoModal {
+  width: 300px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.contenidoModal .cabeceraModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colorHeader);
+  border-radius: 5px 5px 0px 0px;
+}
+.cabeceraModal .titleM {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0px 15px;
+}
+.cabeceraModal .cerrar {
+  color: var(--iconoCard);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all 0.4s ease-in-out;
+}
+.cabeceraModal .cerrar:hover {
+  background-color: var(--red);
+}
+.contenidoModal form {
+  padding: 30px 20px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenidoModal form .row {
+  height: 35px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+}
+.contenidoModal form .row .errores {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: -155px;
+  display: none;
+}
+.contenidoModal form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.4s ease-in-out;
+}
+.contenidoModal form .row select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.4s ease-in-out;
+}
+.contenidoModal form .row .logo {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.contenidoModal form .row .logo p {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.contenidoModal form .row .logo #logoCarr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+form .row input:focus {
+  border-color: var(--colorHeader);
+  box-shadow: 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+}
+form .row select:focus {
+  border-color: var(--colorHeader);
+  box-shadow: 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+}
+.contenidoModal form .row i {
+  position: absolute;
+  width: 37px;
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+  color: var(--white);
+  font-size: 18px;
+  background-color: var(--colorHeader);
+  border: 1px solid var(--colorHeader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenidoModal form .btnCa {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+}
+.contenidoModal form .btnCa #btnCarr {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: var(--colorHeader);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
+}
+.contenidoModal form .btnCa #btnCarr:hover {
+  background-color: var(--ColorIconoSidebar);
+}

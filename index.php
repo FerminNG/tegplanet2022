@@ -26,6 +26,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/css/misEstilos.css">
 
 
 
@@ -35,35 +36,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
   <link rel="stylesheet" href="adicional_admin/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-
-
-
-
-
-
-
-
-
   <title>Emfermera</title>
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -265,9 +238,61 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
               <!-- boton del modal -->
               <div class="col-sm-6">
-                <a href="guardar/guardar.php" class="mt-1 mx-0 btn btn-success" >Nuevo Usuario</a>
+
+                <!-- <a href="guardar/guardar.php" class="mt-1 mx-0 btn btn-success" >Nuevo Usuario</a> -->
                 
               </div> <!-- aqui termina -->
+
+              <!-- *************************MODAL****************************************** -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nuevo Producto</button>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                      </div>
+
+                        <div class="modal-body bodyModal">
+                          
+                          <form id="registro" name="registro" method="POST" action="guardar_paciente.php">
+                            
+                              <div class="p-2  cajas">
+                                <label for="telefono" class="form-label">NOMBRE</label>
+                                <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" required>
+                              </div>
+
+                              <div class="p-2 cajas">
+                                <label for="stock" class="form-label">STOCK</label>
+                                <input type="number" class="form-control" name="stock" id="edad" placeholder="introduce el stock" required>
+                              </div>
+
+                              <div class="p-2 cajas">
+                                <label for="apellidos" class="form-label">stock_min</label>
+                                <input type="number" class="form-control" name="stock_min" id="stock_min" placeholder="introduce el stock_min" required>
+                              </div>
+
+                              <div class="p-2 cajas">
+                                <label for="fecha_vencimiento" class="form-label">fecha_vencimiento</label>
+                                <input type="date" class="form-control" name="fecha_vencimiento" id="fecha_vencimiento" placeholder="introduce el fecha_vencimiento" required>
+
+                              </div>
+
+                              <!-- <div class="form-group d-flex justify-content-center">
+                              <button type="submit" class="btn btn-primary" name="guarda" id="guarda">GUARDAR</button>
+                            </div>      -->
+                          <form>                
+                        
+
+                      <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <button type="submit" class="btn btn-primary" name="guarda" id="guarda" >Registrar</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ************************************************************************ -->
 
 
 
@@ -276,10 +301,10 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
             </div><!-- /.col -->
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
+              <!-- <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="index.php">Principal</a></li>
                 <li class="breadcrumb-item active">Starter Page</li>
-              </ol>
+              </ol> -->
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
