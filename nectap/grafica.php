@@ -121,67 +121,71 @@ Author URL: http://w3layouts.com
     <section id="home" class="w3l-banner py-5">
       <div class="banner-imagee">
         <div class="cards">
-        <div class="contenido-pages">
-            <div class="cards">
-                <div class="card-d card1">
-                    <div class="contenido">
-                        <div class="cantidad">60</div>
-                        <div class="nombre">carreras</div>
-                    </div>
-                    <div class="icono">
-                        <i class="fa fa-institution"></i>
-                    </div>
-                    <div class="detalles">
-                        <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
-                    </div>
-                </div>
-                <div class="card-d card2">
-                    <div class="contenido">
-                        <div class="cantidad">340</div>
-                        <div class="nombre">usuarios</div>
-                    </div>
-                    <div class="icono">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <div class="detalles">
-                        <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
-                    </div>
-                </div>
-                <div class="card-d card3">
-                    <div class="contenido">
-                        <div class="cantidad">39</div>
-                        <div class="nombre">Aulas</div>
-                    </div>
-                    <div class="icono">
-                        <i class="fa fa-inbox "></i>
-                    </div>
-                    <div class="detalles">
-                        <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
-                    </div>
-                </div>
-                <div class="card-d card4">
-                    <div class="contenido">
-                        <div class="cantidad">150</div>
-                        <div class="nombre">usuarios</div>
-                    </div>
-                    <div class="icono">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <div class="detalles">
-                        <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
-                    </div>
-                 </div>
+          <div class="contenido-pages">
+              <div class="cards">
+                  <div class="card-d card1">
+                      <div class="contenido">
+                          <div class="cantidad">60</div>
+                          <div class="nombre">carreras</div>
+                      </div>
+                      <div class="icono">
+                          <i class="fa fa-institution"></i>
+                      </div>
+                      <div class="detalles">
+                          <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
+                      </div>
+                  </div>
+                  <div class="card-d card2">
+                      <div class="contenido">
+                          <div class="cantidad">340</div>
+                          <div class="nombre">usuarios</div>
+                      </div>
+                      <div class="icono">
+                          <i class="fa fa-users"></i>
+                      </div>
+                      <div class="detalles">
+                          <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
+                      </div>
+                  </div>
+                  <div class="card-d card3">
+                      <div class="contenido">
+                          <div class="cantidad">39</div>
+                          <div class="nombre">Aulas</div>
+                      </div>
+                      <div class="icono">
+                          <i class="fa fa-inbox "></i>
+                      </div>
+                      <div class="detalles">
+                          <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
+                      </div>
+                  </div>
+                  <div class="card-d card4">
+                      <div class="contenido">
+                          <div class="cantidad">150</div>
+                          <div class="nombre">usuarios</div>
+                      </div>
+                      <div class="icono">
+                          <i class="fa fa-users"></i>
+                      </div>
+                      <div class="detalles">
+                          <a href="#">Ver detalles <i class="fa fa-arrow-circle-right "></i>  </a>
+                      </div>
+                  </div>
 
-            </div>
-            <!-- fin del div de las tarjetas -->
-            
-         </div>
-         <!-- fin del contenido -->
-        </div>
+              </div>
+              <!-- fin del div de las tarjetas -->            
+          </div>
+          <!-- fin del contenido -->
+          </div>
         </div>
       </div>
-      <div class="banner-content">
-       
+      <div class="banner-content cont">
+        <div class="graficaBarra">
+          <h>aqui ira la grafica de barras</h1>
+        </div>
+        <div class="graficaCircular">
+          <h1>Aqui irá la gráfica cicular</h1>
+        </div>
       </div>
     </section>
     <!-- //banner section -->

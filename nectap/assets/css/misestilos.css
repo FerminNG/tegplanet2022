@@ -14,9 +14,7 @@ body {
 
 .banner-imagee {
   width: 100%;
-  display: flex;
-
-  margin-top: 35px;
+  margin-top: 40px;
 }
 /* estilos del header */
 .menu-header {
@@ -46,12 +44,27 @@ body {
   padding: 10px;
   margin-top: 5px;
 }
+#home .cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.banner-content .graficaBarra {
+  width: 45%;
+  justify-content: space-around;
+  background-color: red;
+}
+
+.banner-content .graficaCircular {
+  width: 50%;
+  background-color: #00878d;
+}
 .contenido-pages .cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  background-color: rebeccapurple;
+  align-items: center;
 }
 .cards .card-d {
   width: 23%;
