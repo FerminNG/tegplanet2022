@@ -1,20 +1,21 @@
 <?php
 
-print_r($_POST);if(!isset($_POST['codigo'])){
-    header('Location: edital.php?mensaje=error');
+print_r($_POST);if(!isset($_POST['Id_Product'])){
+    header('Location: editar.php?mensaje=error');
 }
-include_once '../conexion/conexion.php';
+include_once '../conexion/conexion2.php';
 
-$id_Product= $_POST['id_Product'];
-$nombre=$_POST['nombre'];
-$stock=$_POST['stock'];
-$stock_min=$_POST['stock_min'];
-$fecha=$_POST['fecha_vencimiento'];
+$id_Product=$conn->real_escape_string ($_POST['Id_Product']);
+$nombre=$conn->real_escape_string ($_POST['nombre']);
+$stock=$conn->real_escape_string ($_POST['stock']);
+$stock_min=$conn->real_escape_string ($_POST['stock_min']);
+$fecha=$conn->real_escape_string ($_POST['fecha_vencimiento']);
+
+$sql= "UPDATE productos SET nombre='$nombre', stock='$stock', stock_min='$stock_min', fecha_vencimiento='$fecha' WHERE id=$id_Product";
 
 
+$resultado=$conn->query($sql);
 
-$sentencia= $bd->prepare("UPDATE productos SET  nombre=?, stock=?, stock_min=?, fecha_vencimiento=? WHERE id_Product=?; ");
-$resultado= $sentencia->execute([$codigo,$nombre,$stock,$stock_min,$fecha]);
 
 if($resultado==TRUE){
     header('Location: ../index.php?mensaje=actualizado');

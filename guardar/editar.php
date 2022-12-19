@@ -165,7 +165,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
            
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="hidden" name="id_Product" value="<?php echo $persona->id_Product; ?>">
+              <input type="hidden" name="Id_Product" value="<?php echo $persona->Id_Product; ?>">
               <button type="submit" class="btn btn-success" name="actualizar" id="actualizar" value="Editar">ACTUALIZAR</button>
             </div>
           </form>

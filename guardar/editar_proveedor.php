@@ -130,7 +130,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 
           </div>
 
-          <form id="registro" name="registro" method="POST" action="editar_paciente_actua.php">
+          <form id="registro" name="registro" method="POST" action="editar_provActua.php">
 
             <div class="d-flex flex-row justify-content-center">
               <div class="p-2 col-lg-5 ">
@@ -165,7 +165,7 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
            
             </div>
             <div class="form-group d-flex justify-content-center">
-              <input type="hidden" name="codigo" value="<?php echo $persona->codigo; ?>">
+              <input type="hidden" name="Id_Prove" value="<?php echo $persona->Id_Prove; ?>">
               <button type="submit" class="btn btn-success" name="actualizar" id="actualizar" value="Editar">ACTUALIZAR</button>
             </div>
           </form>

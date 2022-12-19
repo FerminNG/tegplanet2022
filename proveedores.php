@@ -500,7 +500,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                           <td><?php echo $dato->Telefono; ?></td>
                           <td><?php echo $dato->Email; ?></td>
                           
-                       <td><a href="guardar/editar_proveedores.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-warning">Editar</a>
+                       <td><a href="guardar/editar_proveedor.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-warning">Editar</a>
                           <a onclick="return confirm('Estas seguro de eliminar?');" href="guardar/eliminar_paciente.php?Id_Prove=<?php echo $dato->Id_Prove; ?>" class="btn btn-danger">Eliminar</a></td>
                           
                         
