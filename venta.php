@@ -190,62 +190,39 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview menu-open">
-              <!-- <a href="#" class="nav-link active">
+              <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                  Menú
                   <i class="right fas fa-angle-left"></i>
                 </p>
-              </a> -->
-              
-              <!-- <ul class="nav nav-treeview">
-                 <li class="nav-item">
-                  <a href="index.php" class="nav-link active">
+              </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="compras.php" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>INICIO</p>
+                    <p>COMPRAS</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="compras.php" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>COMPRAS</p>
-                  </a>            
-              </ul> -->
-
-              <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Inicio
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="compras.php" class="nav-link">
-                  <i class="nav-icon fas fa-money"></i>
-                  <p>
-                    Compras
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon far fa-image"></i>
-                  <p>
-                    Ventas
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon far fa-image"></i>
-                  <p>
-                    Productos
-                  </p>
-                </a>
-            </li>
-
-
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="compras.php" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>COMPRAS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="consultas.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>VENTAS</p>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -256,13 +233,20 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
       <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">REGISTRO DE COMPRAS</h1>
+              <h1 class="m-0 text-dark">REGISTRO DE PACIENTES</h1>
+
+
+
+
+
+
+
+
 
               <!-- boton del modal -->
               <div class="col-sm-6">
@@ -272,13 +256,13 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
               </div> <!-- aqui termina -->
 
               <!-- *************************MODAL****************************************** -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nueva Compra</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nuevo Producto</button>
 
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nueva Compra</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
                       </div>
 
@@ -287,40 +271,24 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                           <form id="registro" name="registro" method="POST" action="./guardar/guardar_paciente.php">
                             
                               <div class="p-2  cajas">
-                                <label for="telefono" class="form-label">CANTIDAD</label>
-                                <input type="number" class="form-control" name="nombre" id="cant" onChange="PrecionTotal();"; placeholder="introduce la cantidad" required>
+                                <label for="telefono" class="form-label">NOMBRE</label>
+                                <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="stock" class="form-label">PRECIO UNITARIO</label>
-                                <input type="text" class="form-control" name="stock" id="precioUnit" onChange="PrecionTotal();"; placeholder="introduce el precio unitario" required>
+                                <label for="stock" class="form-label">STOCK</label>
+                                <input type="number" class="form-control" name="stock" id="edad" placeholder="introduce el stock" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="apellidos" class="form-label">TOTAL PRECIO <script>document.write(PrecionTotal())</script> </label>
-                                <input type="text" class="form-control" enable="false" name="stock_min" id="precioTotal" placeholder='<script>document.write("Hola malabo")</script>'; required>
+                                <label for="apellidos" class="form-label">stock_min</label>
+                                <input type="number" class="form-control" name="stock_min" id="stock_min" placeholder="introduce el stock_min" required>
                               </div>
 
                               <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">FECHA COMPRA</label>
+                                <label for="fecha_vencimiento" class="form-label">fecha_vencimiento</label>
                                 <input type="date" class="form-control" name="fecha_vencimiento" id="fecha_vencimiento" placeholder="introduce el fecha_vencimiento" required>
-                              </div>
 
-                              <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">PRODUCTO</label>
-                                <select class="form-control" name="" id="">
-                                  <option value="#">Selecciona un producto</option>
-                                  <option value="#">Selecciona un producto</option>
-                                  <option value="#">Selecciona un producto</option>
-                                </select>
-                              </div>
-                              <div class="p-2 cajas">
-                                <label for="fecha_vencimiento" class="form-label">PROVEEDOR</label>
-                                <select class="form-control" name="" id="">
-                                  <option value="#">Selecciona un Proveedor</option>
-                                  <option value="#">Selecciona un Proveedor</option>
-                                  <option value="#">Selecciona un Proveedor</option>
-                                </select>
                               </div>
 
                               <!-- <div class="form-group d-flex justify-content-center">
@@ -336,19 +304,6 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                   </div>
                 </div>
               </div>
-              <script>
-                document.getElementById('precioTotal').disabled = true;
-                
-               
-
-                function PrecionTotal(){
-                  var cantidad = parseInt(document.getElementById('cant'));
-                  var PUnitario = document.getElementById('precioUnit');
-                  var PTotal = cantidad * PUnitario;
-                  alert("El resultado en: "+PTotal);
-                  return PTotal;
-                }
-              </script>
               <!-- ************************************************************************ -->
 
 
@@ -391,14 +346,14 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="emailHelp" placeholder="introduce el codigo" autofocus require>
                   </div>
                   <div class="p-2">
-                    <label for="telefono" class="form-label">CANTIDAD</label>
+                    <label for="telefono" class="form-label">NOMBRE</label>
                     <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" require>
                   </div>
                 </div>
 
                 <div class="d-flex flex-row">
                   <div class="p-2">
-                    <label for="edad" class="form-label">PRECIO UNITARIO</label>
+                    <label for="edad" class="form-label">EDAD</label>
                     <input type="number" class="form-control" name="edad" id="edad" placeholder="introduce la edad" require>
                   </div>
                   <div class="p-2">
@@ -563,13 +518,14 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                   <table id="tabla" class="display" style="width:100%">
                     <thead>
                       <tr>
-                        <th>CÓDIGO</th>
-                        <th>CANTIDAD</th>
-                        <th>PRECIO UNITARIO</th>
-                        <th>TOTAL COMPRA</th>
-                        <th>FECHA COMPRA</th>
+                        <th>ID_PRODUCTO</th>
+                        <th>NOMBRE</th>
+                        <th>STOCK</th>
+                        <th>STOCK_MINIMO</th>
+                        <th>FECHA_VENCIMIENTO</th>
                         <th>OPERACIONES</th>
-        
+                       
+                    
                       </tr>
                     </thead>
                     <tbody>
