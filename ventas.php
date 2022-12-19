@@ -190,62 +190,39 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview menu-open">
-              <!-- <a href="#" class="nav-link active">
+              <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                  Menú
                   <i class="right fas fa-angle-left"></i>
                 </p>
-              </a> -->
-              
-              <!-- <ul class="nav nav-treeview">
-                 <li class="nav-item">
-                  <a href="index.php" class="nav-link active">
+              </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="compras.php" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>INICIO</p>
+                    <p>COMPRAS</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="compras.php" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>COMPRAS</p>
-                  </a>            
-              </ul> -->
-
-              <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Inicio
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="compras.php" class="nav-link">
-                  <i class="nav-icon fas fa-money"></i>
-                  <p>
-                    Compras
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon far fa-image"></i>
-                  <p>
-                    Ventas
-                  </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
-                  <i class="nav-icon far fa-image"></i>
-                  <p>
-                    Productos
-                  </p>
-                </a>
-            </li>
-
-
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="compras.php" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>COMPRAS</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="consultas.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>VENTAS</p>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

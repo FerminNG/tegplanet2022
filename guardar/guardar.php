@@ -1,7 +1,7 @@
 
 <?php
 
-include_once 'conexion/conexion2.php';
+include_once '../conexion/conexion2.php';
 
 
 $query = "SELECT * FROM productos order by Id_Produc desc limit 1";

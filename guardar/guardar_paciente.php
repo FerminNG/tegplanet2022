@@ -5,7 +5,7 @@
 if(empty($_POST['nombre'])|| empty($_POST['stock'])|| empty($_POST['stock_min'])
 || empty($_POST['fecha_vencimiento'])){
 
- header('Location: guardar.php?mensaje=falta');
+ header('Location: index.php?mensaje=falta');
  exit();
 
 }
