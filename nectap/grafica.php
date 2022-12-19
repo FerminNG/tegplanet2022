@@ -1,7 +1,7 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+<?php
+require_once "conexion.php";
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -24,9 +24,55 @@ Author URL: http://w3layouts.com
 
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href="assets/css/style-starter.css" />
+
+
+
+
+
+
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+           ['Task', 'Hours per Day'],
+          <?php
+          $SQL = "SELECT * FROM productos";
+          $consulta = mysqli_query($conn, $SQL);
+          while ($resultado = mysqli_fetch_assoc($consulta)){
+            echo "['" .$resultado['NombreProducto']."', " .$resultado['stock_inicial']."],";
+          }
+
+?>
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+
+    </script>
+
+
+
+
+
   </head>
 
   <body>
+
+ 
+
+    
     <!--header-->
     <header id="site-header" class="fixed-top">
       <div class="container-fluid">
@@ -181,7 +227,27 @@ Author URL: http://w3layouts.com
       </div>
       <div class="banner-content cont">
         <div class="graficaBarra">
-          <h>aqui ira la grafica de barras</h1>
+          
+
+
+
+
+
+
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <div class="graficaCircular">
           <h1>Aqui irá la gráfica cicular</h1>
