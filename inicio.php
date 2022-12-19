@@ -259,8 +259,8 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                           <form id="registro" name="registro" method="POST" action="guardar/guardar_paciente.php">
                             
                               <div class="p-2  cajas">
-                                <label for="nombre" class="form-label">NOMBRE</label>
-                                <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" required>
+                                <label for="Nombre" class="form-label">NOMBRE</label>
+                                <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="introduce el nombre" required>
                               </div>
 
                               <div class="p-2 cajas">
@@ -335,7 +335,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                   </div>
                   <div class="p-2">
                     <label for="telefono" class="form-label">NOMBRE</label>
-                    <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" require>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" require>
                   </div>
                 </div>
 
@@ -520,7 +520,7 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
                      
                   <?php foreach($persona as $dato){  ?>
                         <tr>
-                          <td><?php echo $dato ->Id_Produc; ?></td>
+                          <td><?php echo $dato->Id_Produc; ?></td>
                           <td><?php echo $dato->Nombre; ?></td>
                           <td><?php echo $dato->stock; ?></td>
                           <td><?php echo $dato->stock_min; ?></td>

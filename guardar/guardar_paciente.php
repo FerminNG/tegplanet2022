@@ -16,14 +16,14 @@
 include_once '../conexion/conexion.php';
 
 
-$nombre=$_POST['nombre'];
+$nombre=$_POST['Nombre'];
 $stock=$_POST['stock'];
 $stock_min=$_POST['stock_min'];
 $fecha=$_POST['fecha_vencimiento'];
 
 
 
-$sentencia= $bd->prepare("INSERT INTO productos(nombre,stock,stock_min,fecha_vencimiento) values (?,?,?,?);");
+$sentencia= $bd->prepare("INSERT INTO productos(Nombre,stock,stock_min,fecha_vencimiento) values (?,?,?,?);");
 
 $resultado= $sentencia->execute([$nombre,$stock,$stock_min,$fecha]);
 
