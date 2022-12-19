@@ -2,13 +2,13 @@
 
 
 //print_r($_POST);
-if(empty($_POST['nombre'])|| empty($_POST['stock'])|| empty($_POST['stock_min'])
+/*if(empty($_POST['nombre'])|| empty($_POST['stock'])|| empty($_POST['stock_min'])
 || empty($_POST['fecha_vencimiento'])){
 
  header('Location: guardar.php?mensaje=falta');
  exit();
 
-}
+} */
 
 
 
