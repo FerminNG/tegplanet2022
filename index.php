@@ -291,10 +291,10 @@ $persona= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
                         <div class="modal-body bodyModal">
                           
-                          <form id="registro" name="registro" method="POST" action="./guardar/guardar_paciente.php">
+                          <form id="registro" name="registro" method="POST" action="guardar_paciente.php">
                             
                               <div class="p-2  cajas">
-                                <label for="telefono" class="form-label">NOMBRE</label>
+                                <label for="nombre" class="form-label">NOMBRE</label>
                                 <input type="txt" class="form-control" name="nombre" id="nombre" placeholder="introduce el nombre" required>
                               </div>
 
